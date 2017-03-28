@@ -1,0 +1,236 @@
+\documentclass[10pt]{article}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% set margins
+\usepackage[letterpaper,margin=0.75in]{geometry}
+
+% standard packages
+\usepackage[english]{babel}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{url}
+
+% fonts
+\usepackage[scaled]{helvet}
+\usepackage[T1]{fontenc}
+
+% table formatting
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{booktabs}
+
+% list and header formatting
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{multicol}
+
+% special characters
+\usepackage{tipa}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+% remove page number
+\pagenumbering{gobble}
+
+% set font
+\renewcommand\familydefault{\sfdefault}
+
+% reduce list spacing
+\setlist[itemize]{leftmargin=1.5em, itemsep=0em, topsep=-0.5em, partopsep=0em}
+
+% no indent, use skip
+\setlength{\parindent}{0em}
+\setlength{\parskip}{1em}
+
+% remove table cell padding
+\setlength{\tabcolsep}{0em}
+
+% header formatting
+\titleformat*{\section}{\large\bfseries}
+\titlespacing*{\section}{0em}{1em}{-0.5em}
+
+% custom dotfill
+\makeatletter
+\newcommand\cdotfill{\leavevmode\cleaders\hb@xt@.33em{\hss.\hss}\hfill\kern\z@}
+\makeatother
+
+% shortcuts
+\newcommand\vbar{\raisebox{.15em}{\resizebox{0.9em}{0.6em}{~\textpipe~\,\,}}}
+\newcommand\hdotfill{\small\normalfont~\textls[-50]{\cdotfill}}
+\newcommand\fs[2]{\fontsize{#1}{#2}\selectfont}
+
+% - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+\begin{document}
+
+\begin{tabularx}{\textwidth}{Xr}
+\multirow{2}{*}{%
+\fs{14}{10}\textbf{John Doe}
+\fs{14}{10}\vbar
+\fs{10}{10} Software Engineer
+}
+& \small (555) 555--5555 \vbar jdoe@example.com \\
+& \small 1234 Main St., Somewhere VT 54321
+\end{tabularx}
+
+\vspace{6pt}
+\hrule
+
+\section{Education\hdotfill}
+
+{\bf M.Sc., Computer Science} \vbar Some University \hfill {\sl December 2008} \\
+Thesis: ``Formatting a CV in LaTeX'' \\
+GPA: 3.910
+
+{\bf B.Sc., Computer Science (Honors)} \vbar Some University \hfill {\sl May 2006} \\
+Minor: Software Engineering \\
+GPA: 3.882
+
+\section{Skills\hdotfill}
+
+\begin{multicols}{2}
+\begin{itemize}
+\item Primary languages: C, C++
+\item Additional languages: Java, COBOL, Perl
+\item Embedded systems programming
+\item Linux system administration
+\end{itemize}
+\end{multicols}
+\vspace{-\baselineskip}
+
+\section{Experience\hdotfill}
+
+{\bf Project Manager} \hfill {\sl June 2010 -- Present} \\
+Some Company \vbar Some Place, MO
+
+\begin{itemize}
+
+\item Did stuff with software.
+
+\item Led a team of other people who did stuff with software.
+
+\item Made computers do magic.
+
+\end{itemize}
+
+\vspace{0.5em}
+
+{\bf Embedded Software Engineer} \hfill {\sl January 2009 -- June 2010} \\
+Another Company \vbar Somewhere, TX
+
+\begin{itemize}
+
+\item Did stuff with software.
+
+\item Yelled at the compiler when it gave me an error.
+
+\item Made a toaster sentient.
+
+\end{itemize}
+
+\vspace{0.5em}
+
+{\bf Research Assistant} \hfill {\sl August 2006 -- December 2008} \\
+Some University \vbar Somewhere, TX
+
+\begin{itemize}
+
+\item Pretended I knew what I was doing when people asked me questions.
+
+\item Wrote a bunch of code that didn't compile.
+
+\end{itemize}
+
+\vspace{0.5em}
+
+\pagebreak
+
+\section{Research projects\hdotfill}
+
+{\bf Internet of Everything}
+
+\begin{itemize}
+\setlength\itemsep{2pt}
+
+\item
+\textbf{IoT Security Suite:}
+Implemented network protocols devoid of cryptography to allow IoT devices to easily share data with hackers.
+
+\item
+\textbf{Software Stack for Embedded Devices:}
+Designed a suite capable of connecting various appliances to the Internet, provided you can fit an x86 processor inside them.
+
+\item
+\textbf{Embedded Device Reliability:}
+Invented a mechanism to prevent IoT devices from failing more than once every few hours.
+
+\end{itemize}
+
+\vspace{0.5em}
+
+{\bf Mission-Critical Software Systems}
+
+\begin{itemize}
+\setlength\itemsep{2pt}
+
+\item
+\textbf{Scalability:} Created a monolithic backend system capable of supporting no more than 10 users concurrently.
+
+\item
+\textbf{Resilience:} Architected a database system which only loses half of its data when it fails.
+
+\end{itemize}
+
+\section{Presentations and publications\hdotfill}
+
+\begin{multicols}{2}
+
+\small
+
+J. Doe. 
+``A resilient database system for mission-critical applications.''
+Transactions on Undependable Computing, 2009.
+
+J. Doe, A. Person, A. Guy.
+``Some paper about some thing.''
+Some conference, 2009.
+
+J. Doe.
+``Yet another paper, but this one is about the same thing as the last one.''
+Some conference, 2008.
+
+\columnbreak
+
+J. Doe, A. Person, A. Guy.
+``Another paper about a different thing.''
+Some journal, 2007.
+
+J. Doe, A. Person, A. Guy.
+``Another paper about a different thing.''
+A different conference, 2007.
+
+J. Doe, A. Person, A. Guy.
+``Another paper about a different thing.''
+A different conference, 2006.
+
+\end{multicols}
+
+\section{Honors and awards \hdotfill} 
+
+\begin{itemize}
+	\setlength\itemsep{0pt}
+	\item \textbf{Worthless Scholarship} \vbar
+		  Some University \vbar
+		  \textit{Spring 2006}
+	
+	\item \textbf{Stupid Award} \vbar
+		  Some University \vbar
+		  \textit{Fall 2005}
+		  
+	\item \textbf{Dean's List} \vbar
+	      Some University \vbar
+	      \textit{2002 -- 2006}
+\end{itemize}
+
+\end{document}
